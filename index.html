@@ -65,7 +65,6 @@
         .social-links a {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #3498db;
             color: white;
             border-radius: 8px;
             font-size: 16px;
@@ -76,9 +75,41 @@
             max-width: 200px;
         }
 
-        .social-links a:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
+        /* GitHub Button */
+        .social-links a[href*="github.com"] {
+            background-color: #333; /* GitHub's official color */
+        }
+
+        .social-links a[href*="github.com"]:hover {
+            background-color: #24292e; /* Darker shade for hover */
+        }
+
+        /* LinkedIn Button */
+        .social-links a[href*="linkedin.com"] {
+            background-color: #0077b5; /* LinkedIn's official color */
+        }
+
+        .social-links a[href*="linkedin.com"]:hover {
+            background-color: #005f8e; /* Darker shade for hover */
+        }
+
+        /* ResearchGate Button */
+        .social-links a[href*="researchgate.net"] {
+            background-color: #00ccbb; /* ResearchGate's official color */
+        }
+
+        .social-links a[href*="researchgate.net"]:hover {
+            background-color: #00b3a4; /* Darker shade for hover */
+        }
+
+        /* Instagram Button */
+        .social-links a[href*="instagram.com"] {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); /* Instagram's gradient */
+            color: white;
+        }
+
+        .social-links a[href*="instagram.com"]:hover {
+            background: linear-gradient(45deg, #374ec7, #4f48c2, #732a9d, #a82a6f, #c2255d, #e61414); /* Darker gradient for hover */
         }
 
         /* Footer */
