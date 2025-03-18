@@ -3,89 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Güney Söğüt - Personal Website</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full-page height */
         }
+
+        /* Header */
         header {
-            background-color: #0073b1;
+            background-color: #000; /* Black header */
             color: white;
-            padding: 20px 0;
+            padding: 80px 20px;
             text-align: center;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #bdc3c7;
+        }
+
+        /* Main Content */
         .container {
+            flex: 1; /* Takes up remaining space */
             max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
         }
-        h1, h2 {
-            color: #0073b1;
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
-        a {
-            color: #0073b1;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
+        /* Social Links */
         .social-links {
             margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
+
         .social-links a {
-            margin-right: 15px;
-            font-size: 18px;
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+            flex: 1 1 150px; /* Responsive flex layout */
+            max-width: 200px;
         }
+
+        .social-links a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
+            background-color: #000; /* Black footer */
+            color: white;
             text-align: center;
             padding: 20px 0;
-            background-color: #0073b1;
-            color: white;
-            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .social-links a {
+                padding: 10px 20px;
+                font-size: 14px;
+                flex: 1 1 120px; /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 60px 10px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .social-links a {
+                padding: 8px 16px;
+                font-size: 12px;
+                flex: 1 1 100px; /* Adjust for very small screens */
+            }
         }
     </style>
+    <!-- Add Inter Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Güney Söğüt</h1>
         <p>Welcome to my personal website</p>
     </header>
 
     <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm [Your Name], a [Your Profession/Title] with a passion for [Your Interests]. 
-                I specialize in [Your Specialization] and have experience in [Your Experience]. 
-                Feel free to explore my work and connect with me on the following platforms:
-            </p>
-        </section>
-
-        <section class="social-links">
-            <h2>Connect with Me</h2>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="https://www.researchgate.net/profile/yourusername" target="_blank">ResearchGate</a>
-        </section>
-
-        <section>
-            <h2>My Work</h2>
-            <p>
-                Here you can add a brief description of your projects, research, or any other work you'd like to showcase.
-            </p>
-        </section>
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://github.com/guneysogutt" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/guney-sogut-23a081223/" target="_blank">LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Gueney-Soeguet?ev=hdr_xprf" target="_blank">ResearchGate</a>
+            <a href="https://www.instagram.com/guneysogut8/" target="_blank">Instagram</a>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Güney Söğüt. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Automatically update the year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
