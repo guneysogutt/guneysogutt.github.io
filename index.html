@@ -15,12 +15,12 @@
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Full-page height */
+            min-height: 100vh;
         }
 
         /* Header */
         header {
-            background-color: #000; /* Black header */
+            background-color: #000;
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -40,7 +40,7 @@
 
         /* Main Content */
         .container {
-            flex: 1; /* Takes up remaining space */
+            flex: 1;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
@@ -53,6 +53,23 @@
             margin-bottom: 20px;
         }
 
+        /* About Me Section - Simplified */
+        .about-me {
+            margin: 30px 0;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .about-me h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .about-me p {
+            margin-bottom: 15px;
+        }
+
         /* Social Links */
         .social-links {
             margin-top: 20px;
@@ -63,66 +80,60 @@
         }
 
         .social-links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 12px 24px;
             color: white;
             border-radius: 8px;
             font-size: 16px;
             transition: transform 0.2s ease, background-color 0.3s ease;
-            text-align: center;
-            text-decoration: none; /* Remove underline */
-            flex: 1 1 150px; /* Responsive flex layout */
-            max-width: 200px;
+            text-decoration: none;
+            min-width: 150px;
+            box-sizing: border-box;
         }
 
-        /* GitHub Button */
         .social-links a[href*="github.com"] {
-            background-color: #333; /* GitHub's official color */
+            background-color: #333;
         }
 
         .social-links a[href*="github.com"]:hover {
-            background-color: #24292e; /* Darker shade for hover */
+            background-color: #24292e;
         }
 
-        /* LinkedIn Button */
         .social-links a[href*="linkedin.com"] {
-            background-color: #0077b5; /* LinkedIn's official color */
+            background-color: #0077b5;
         }
 
         .social-links a[href*="linkedin.com"]:hover {
-            background-color: #005f8e; /* Darker shade for hover */
+            background-color: #005f8e;
         }
 
-        /* ResearchGate Button */
         .social-links a[href*="researchgate.net"] {
-            background-color: #00ccbb; /* ResearchGate's official color */
+            background-color: #00ccbb;
         }
 
         .social-links a[href*="researchgate.net"]:hover {
-            background-color: #00b3a4; /* Darker shade for hover */
+            background-color: #00b3a4;
         }
 
-        /* Instagram Button */
         .social-links a[href*="instagram.com"] {
-            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); /* Instagram's gradient */
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
             color: white;
         }
 
         .social-links a[href*="instagram.com"]:hover {
-            background: linear-gradient(45deg, #374ec7, #4f48c2, #732a9d, #a82a6f, #c2255d, #e61414); /* Darker gradient for hover */
+            background: linear-gradient(45deg, #374ec7, #4f48c2, #732a9d, #a82a6f, #c2255d, #e61414);
         }
 
-        /* Footer */
-        footer {
-            background-color: #000; /* Black footer */
+        /* Google Scholar Button */
+        .social-links a[href*="scholar.google.com"] {
+            background-color: #4285F4;
             color: white;
-            text-align: center;
-            padding: 20px 0;
         }
 
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
+        .social-links a[href*="scholar.google.com"]:hover {
+            background-color: #3367D6;
         }
 
         /* Animations */
@@ -160,9 +171,9 @@
             }
 
             .social-links a {
-                padding: 10px 20px;
+                padding: 10px 15px;
                 font-size: 14px;
-                flex: 1 1 120px; /* Adjust for smaller screens */
+                min-width: 120px;
             }
         }
 
@@ -187,14 +198,17 @@
                 font-size: 1.3em;
             }
 
+            .social-links {
+                gap: 10px;
+            }
+
             .social-links a {
-                padding: 8px 16px;
+                padding: 8px 12px;
                 font-size: 12px;
-                flex: 1 1 100px; /* Adjust for very small screens */
+                min-width: 100px;
             }
         }
     </style>
-    <!-- Add Inter Font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -205,19 +219,21 @@
     </header>
 
     <div class="container">
+        <div class="about-me">
+            <h3>About Me</h3>
+            <p>I'm Güney Söğüt, a junior software engineer at Soft Business Solutions and a passionate student of computer engineering at Dokuz Eylul University.  My career background and academic background have contributed to my deep interest in emerging technologies, especially IoT, machine learning, and AI.  I enjoy working on projects and am proud of my background of making valuable contributions to a variety of technical projects.</p>
+            <p>In addition to my technical endeavors, I have 14 years of experience playing competitive basketball and 3 years of coaching, which have developed my ability of collaboration, leadership, and thinking strategically.  As a committed, quick-learning engineer who continuously expands his knowledge through personal projects and further education, these attributes now enhance my professional work ethic. In addition, I enjoy jazz and blues music, and two of the greatest musicians who have had a significant influence on my life are Sonny Rollins and Max Roach.</p>
+        </div>
+        
         <h2>Connect with Me</h2>
         <div class="social-links">
             <a href="https://github.com/guneysogutt" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/guney-sogut-23a081223/" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=muM3LbIAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Gueney-Soeguet?ev=hdr_xprf" target="_blank">ResearchGate</a>
             <a href="https://www.instagram.com/guneysogut8/" target="_blank">Instagram</a>
         </div>
     </div>
-    
-    <script>
-        // Automatically update the year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 
 </body>
 </html>
